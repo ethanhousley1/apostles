@@ -22,7 +22,6 @@ function speakerClicked(clickedDiv) {
     }
     clickedDiv.addEventListener('mouseleave', function() {
         clickedDiv.dataset.clicked = 'false';
-        console.log('Mouse left the div!');
         cardTitle.classList.remove('card-title-active');
         img.classList.remove('active-img');
     })

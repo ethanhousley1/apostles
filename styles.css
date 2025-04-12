@@ -52,7 +52,7 @@ body {
     cursor: pointer;
 }
 .apostle-card {
-    height: 250px;
+    height: 275px;
     width: 175px;
     border-radius: 1rem;
     box-shadow: 2px 2px 6px;
@@ -119,25 +119,28 @@ body {
     transform: scale(1.1);
 }
 #pres-nelson img {
+    object-position: -4rem;
     
-    object-position: 0;
 }
 
 #cook img {
-    object-position: -11rem;
+    object-position: -13rem;
+}
+#cook .card-quote{
+    padding: 0;
 }
 #christofferson img {
-    object-position: -6rem;
+    object-position: -8rem;
 }
 #stevenson img {
-    object-position: -9rem;
+    object-position: -11rem;
 }
 #renlund img {
     object-position: -2rem;
 }
 
 #soares img{
-    object-position: -3rem;
+    object-position: -4rem;
 }
 
 
