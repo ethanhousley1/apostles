@@ -4,9 +4,24 @@ document.querySelectorAll('.clickable').forEach((div) => {
         speakerClicked(clickedDiv);
     });
 });
-document.body.addEventListener('hover', function (event) {
 
-})
+document.querySelectorAll('.invitation-btn').forEach((div) => {
+        div.addEventListener('click', function(event) {
+            let clickedInvite = event.currentTarget;
+            let message = div.getAttribute('data-message');
+            document.querySelector('.invitation-message').textContent = message;
+            document.querySelector('.invitation').style.display = 'flex';
+            
+        });
+        
+});
+
+
+document.querySelectorAll('.close-invitation').forEach((div) => {
+    div.addEventListener('click', function(event) {
+        document.querySelector('.invitation').style.display = 'none';
+    });
+});
 
 function speakerClicked(clickedDiv) {
     let img = clickedDiv.querySelector('img');
@@ -14,6 +29,9 @@ function speakerClicked(clickedDiv) {
     let cardTitle = clickedDiv.querySelector('.card-title');
     let clickedOnce = clickedDiv.dataset.clicked === 'true';
     cardTitle.classList.add('card-title-active');
+    
+    
+    
     if (!clickedOnce) {
         clickedDiv.dataset.clicked = 'true';
     } else {
@@ -27,6 +45,6 @@ function speakerClicked(clickedDiv) {
     })
 }
 
-function goToLink(link) {
-    window.open(link, '_blank');
-}
+// function goToLink(link) {
+//     window.open(link, '_blank');
+// }
